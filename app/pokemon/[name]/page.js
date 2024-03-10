@@ -5,6 +5,7 @@ import { useAppContext } from '@/context/AppContext'
 import { useEffect, useState } from 'react'
 import { getSelectedPokemon } from '@/api/api'
 import { usePathname } from 'next/navigation'
+import { Skeleton } from '@mui/material'
 
 export default function Pokemon() {
   const pathname = usePathname()
@@ -18,6 +19,9 @@ export default function Pokemon() {
       setPokemon(data)
     })
   }, [])
-  console.log(pokemon)
-  return pokemon && <PokemonCard data={pokemon} />
+  return pokemon ? (
+    <PokemonCard data={pokemon} />
+  ) : (
+    <Skeleton variant="rectangular" width="100%" height="500px" />
+  )
 }

@@ -19,7 +19,7 @@ export const PokemonCard = ({ data }) => {
       >
         {name}
       </Typography>
-      <Box width="100%" height={200} mb="44px" position="relative">
+      <Box width="100%" height="200px" mb="44px" position="relative">
         <Image
           src={sprites.front_default}
           alt="Спрайт покемона"

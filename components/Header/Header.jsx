@@ -1,6 +1,7 @@
 'use client'
 
 import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material'
+import { Click } from '@/svg'
 
 export const Header = () => {
   return (
@@ -10,7 +11,13 @@ export const Header = () => {
           <Box sx={{ border: 1 }}>
             <Typography sx={{ p: 1 }}>ПОКЕМОНЫ API</Typography>
           </Box>
-          <Typography>click</Typography>
+          <Box sx={{ display: 'flex', gap: '10px' }}>
+            <Click />
+            <Box sx={{ flexDirection: 'row' }}>
+              <Typography>Нажмите на</Typography>
+              <Typography>нужного Покемона</Typography>
+            </Box>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
