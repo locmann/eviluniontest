@@ -1,13 +1,17 @@
-import { AppBar, Box, Container, Typography } from '@mui/material'
+'use client'
+
+import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material'
 
 export const Header = () => {
   return (
-    <AppBar sx={{ backgroundColor: 'black' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#131313', boxShadow: 'none' }}>
       <Container>
-        <Box sx={{ border: 1 }}>
-          <Typography>ПОКЕМОНЫ API</Typography>
-        </Box>
-        <Typography>click</Typography>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Box sx={{ border: 1 }}>
+            <Typography sx={{ p: 1 }}>ПОКЕМОНЫ API</Typography>
+          </Box>
+          <Typography>click</Typography>
+        </Toolbar>
       </Container>
     </AppBar>
   )
